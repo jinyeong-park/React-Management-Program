@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CSS 문법 -->
+    <!-- 태그 {속성: 값}
+
+    선택자: 태그/ 태그의 id(#)-중복불가/ 태그의 class(.)--여러개 가능
+    selector {property:value; property:value;} -->
+
+    h1 {color:blue; font-size:12px;}
+    p{ background-color:yellow; }
+
+    #special {color:red}
+    <p id="special"></p>
+
+    .type1 {color:red;}
+    <p class="type1">
+
+
+        <!-- CSS 작성하는 3방법-->
+        1. 태그 내부에 직접 스타일, 다른 태그에 또 지정 (inline CSS)
+        <p style="background-color:yellow;"></p>
+        2. 내부 스타일 시트(head 태그 내부에 style 작성- 그 해당 페이지에 적용)
+        3. 외부 스타일 시트 파일 : 여러 페이지에 걸처 적용하고 싶을 때, 따른 스타일시트 파일 만듦
+        <link type="text/css" rel="stylesheet" href="스타일시트파일">
+        <link rel="stylesheet" href="스타일시트파일">
+
+
+        <!-- RGB 컬러 : 빛의 3원색-->
+        16진수로 표현할 경우 (F:Full)
+        #RRGGBB: red, green, blue
+        #000000: black
+        #FFFFFF: white
+        #FF0000: Red
+        #00FF00: Green
+        #0000FF: blue;
+        - 퍼센트로 표시할 경우: rgb(60%, 40%, 10%)
+        - 0~255 십진수로 표시할 경우: rgb(153, 102, 25)
+
+        <!-- style 태그 : 글자색상: color /  배경색상: background-color -->
+        1. 태그 내부에 직접 스타일, 다른 태그에 또 지정 (inline CSS)
+        <p style="color: aqua; background-color:fuchsia">This is a paragraph.</p>
+        <p>두번째 단락</p>
+        <p>세번째 단락</p>
+        <span>첫번째 span</span>
+
+
+        <!-- margin : 다른 요소와의 여백
+        padding: 내부 여백 -->
+
+        <!-- 주석 관련
+    <!-- <html> </html> html 코드              ---      -->
+        <!-- <style> </style> css 코드             ---     /* */ 
+    <% %> 자바 코드                --- // 한줄 주석, /* */ 
+    <script> </script> 자바스크립트 코드 --- // 한줄 주석, /* */ 
+--> -->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링 슬라이드 배너</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            var list = $("#banner");
+            var show_num = 3; //프레임에 표시할 사진수
+            var num = 0;
+            var total = $(">li", list).size(); //list의 자식 태그 <li>의 개수
+            var li_width = $("li:first", list).width(); //<li>의 너비
+
+            // <li> 태그 중 인덱스 값이 3보다 작은 <li>태그만 복제
+            // 0,1,2 인덱스에 해당하는 <li> 태그가 복제되어 <ul id="banner">에 추가
+            // lt - less than ~보다 작은
+            var copyObj = $(">li:lt(" + show_num + ")", list).clone();
+            list.append(copyObj);
+
+            //다음 버튼을 클릭할 때 마다 이벤트 핸들러 실행
+            // $(".next").click(function(){});
+            $(".next").on("click", function () {
+                if (num == total) {   //num 값이 5일 경우
+                    num = 0;
+                    list.css("margin-left", num);
+                }
+                num++;
+                list.stop().animate({ marginLeft: -li_width * num + "px" }, 500);
+                return false;
+            });
+            // 이전 버튼을 클릭할 때 마다 이벤트 핸들러 실행
+            $("prev").on("click", function () {
+                if (num == 0) {
+                    num = total;
+                    list.css("margin-left", -num * li_width + "px");
+                }
+                num--; //num에 값을 1씩 감소합니다.
+                list.stop().animate({ marginLeft: -li_width * num + "px" }, 500);
+                return false;
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            border: none;
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            width: 80px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #banner_wrap {
+            width: 260px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid #aaa
+        }
+
+        #banner {
+            width: 5000px;
+            /* 스크롤을 고려하여 넉넉히 */
+        }
+
+        #frame {
+            width: 232px;
+            height: 54px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        p #prevB {
+            width: 5px;
+            height: 5px;
+        }
+
+        p #nextB {
+            width: 5px;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>롤링 슬라이드 배너</h1>
+    <div id="banner wrap">
+        <ul>
+            <!-- <img id="img1" src="../images/leaf.jpeg">
+            <img id="img2" src="../images/google.png"> -->
+            <li><a href="#"><img src="../imgages/leaf.jpeg" alt="사진1"></a></li>
+            <li><a href="#"><img src="../imgages/img2.jpeg" alt="사진2"></a></li>
+            <li><a href="#"><img src="../imgages/img3.jpeg" alt="사진3"></a></li>
+            <li><a href="#"><img src="../imgages/img4.jpeg" alt="사진4"></a></li>
+            <li><a href="#"><img src="../imgages/img5.jpeg" alt="사진5"></a></li>
+            <li><a href="#"><img src="../imgages/img6.jpeg" alt="사진6"></a></li>
+            <li><a href="#"><img src="../imgages/img7.jpeg" alt="사진7"></a></li>
+        </ul>
+    </div>
+    <p>
+        <a id="prevB" href="#" class="prev">
+            <img src="../images/prev_btn.png" alt="이전">
+        </a>
+        <a id="nextB" href="#" class="next">
+            <img src="../images/next_btn.png" alt="다음">
+        </a>
+    </p>
+
+
+</body>
+
+</html>

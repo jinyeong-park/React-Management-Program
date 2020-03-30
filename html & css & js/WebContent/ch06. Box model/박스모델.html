@@ -1,0 +1,35 @@
+<!-- 박스모델: 웹 브라우저는 HTML 내의 요소들을 사각형으로 간주하고
+웹 페이지에 출력시킴
+요소들을 박스형태로 그리는 것을 박스모델이라고 함. -->
+
+
+<!-- margin - border - padding - content
+(완전 바깥쪽 여백)-(경계선)-(안쪽 여백) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.test {
+            background-color: yellow;
+            width: 200px;
+            padding: 10px;
+            /* padding: 10px 50px 10px 50px; */
+            border: 5px solid red;
+            text-align: center;
+            /* 박스 내부의 컨텐츠 정렬*/
+            margin: auto;
+            /* 박스를 가운데로 배치 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test">div 요소</div>
+</body>
+
+</html>

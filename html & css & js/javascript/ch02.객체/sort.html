@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort</title>
+    <script>
+        var myArray = [10, 100, 88, 77, 99, 200];
+        // < !--문자열 기준 정렬-- >
+        myArray.sort();
+        document.write(myArray + "<br>");
+        // 숫자 기준 정렬 => 추가 함수 넣어줘야 함
+        // function(a,b) a-b < 0=> 그대로, a-b>0 자리바꿈, a==b그대로
+        myArray.sort(function (a, b) { return a - b; });
+        document.write(myArray + "<br>"); //숫자 기준 오름차순 정렬
+
+
+        myArray.sort(function (a, b) { return b - a; });
+        document.write(myArray + "<br>"); //숫자 기준 내림차순 정렬
+
+        //slice 잘라내기 함수
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //인덱스 5번부터 끝까지
+        var newArray = numbers.slice(5)  //6, 7, 8, 9,10
+        document.write(newArray + "<br>")
+        //인덱스 5번~7번까지
+        var newArray2 = numbers.slice(5, 8)  //6, 7, 8
+        document.write(newArray2 + "<br>")
+
+        //join : 배열을 합쳐서 스트링 만듦
+        var result = numbers.join("")   //12345678910
+        document.write(result + "<br>")
+
+        //slpit : 문자열을 나눠서 배열로
+        //인덱스 5번~7번까지
+        var result2 = result.split("")  //1,2,3,4,5,6,7,8,9,1,0
+        document.write(result2 + "<br>")
+
+        //sllice : 잘라내고 싶은 것 리턴       
+        var result3 = numbers.splice(2, 1)  //index 2에서 1개 잘라내기 : 3 
+        document.write(result3 + "<br>")
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

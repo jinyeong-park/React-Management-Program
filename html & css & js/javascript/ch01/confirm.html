@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm 대화 상자</title>
+    <script>
+        //confirm() 대화상자 -- boolean return / 확인 취소, 컨펌
+        var user = confirm("계속 할까요?");   //cancel and ok 버튼 만들어짐
+        document.write(typeof (user) + "<br>");
+        document.write(user + "<br>");
+        if (user == true) {
+            document.write("확인 버튼을 눌렀습니다.");
+        } else {
+            document.write("취소 버튼을 눌렸습니다.")
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button type="button" onclick="alert('계속할까요')">버튼</button> -->
+
+</body>
+
+</html>

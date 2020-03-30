@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 효과</title>
+    <style>
+        div {
+            /* 절대 좌표 */
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            background: yellow;
+            /* 5초동안 천천히 길이 변화되게 */
+            transition: width 5s, height 5s, transform 5s;
+        }
+
+        /* 마우스가 올라가면 사이즈 변경 */
+        div:hover {
+            width: 200px;
+            height: 500px;
+            /* ㄴㄴㄴㄴㄴㄴ */
+            /* 크기 변환 scale (x축 길이 비율, y축 길이 비율) */
+            /* transform: scale(1.5, 1.5); */
+            /* 비틀기 skew(x축각도, y축각도) */
+            /* transform: skew(30deg, 20deg); */
+
+            /* transform: rotate */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+
+</body>
+
+</html>

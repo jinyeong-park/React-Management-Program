@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p {} */
+        #target1 {
+            width: 100px;
+            height: 50px;
+            background-color: yellow;
+            resize: both;
+            /* resize: 크기 조절 옵션 
+            resize: none both(좌우상하 조절가능) horizontal vertical 
+            */
+            /* overflow : 내용이 많으면 어떻게 할껀지 */
+            overflow: auto;
+            /* hidden(내용 많으면 짤림) scroll auto(내용이 많으면 자동 스크롤바 표시) */
+        }
+
+        #target2 {
+            width: 100px;
+            height: auto;
+            /* 컨텐츠의 길이에 따라 세로 사이즈 자동증가 */
+            background-color: lime;
+        }
+    </style>
+</head>
+
+<!-- 내용이 많아지면 스크롤바  overflow: auto -->
+<!-- 스크롤바 항상 표시 overflow: scroll -->
+
+<body>
+    <p id="target1">p요소p요소p요소p요소p요소p요소p요소p요소p요소p요소p요소p요소p요소p요소</p>
+    <div id="target2">div요소</div>
+</body>
+
+</html>

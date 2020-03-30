@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 만드는 3가지 방법</title>
+    <script>
+
+        //2차원 배열 만들기
+        var myArray0 = new Array();
+        myArray0[0] = ["사과1", "오렌지1", "바나나1"];
+        myArray0[1] = ["사과2", "오렌지2", "바나나2"];
+        myArray0[2] = ["사과3", "오렌지3", "바나나3"];
+
+        // myArray0[0] = "사과";
+        // myArray0[1] = "오렌지";
+        // myArray0[2] = "바나나";
+
+        var myArray1 = [["사과1", "오렌지1", "바나나1"], ["사과2", "오렌지2", "바나나2"], ["사과3", "오렌지3", "바나나3"]];
+
+        //2차원 배열 printArray 함수 만들기 - 이중 for loop 사용
+        function printArray(a) {
+            for (i = 0; i < a.length; i++) { //배열참조변수.length : 배열의 원소 갯수
+                for (j = 0; j < a[i].length; j++) {
+                    document.write(a[i][j] + " ");  // a는 호출한 라인의 배열을 가리킴
+                }
+            }
+            document.write("<br>");
+        }
+
+        printArray(myArray0);
+        printArray(myArray1);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <script>
+        //배열 만들기
+        var fruits = new Array();  // 배열 선언 (fruits: 배열참조 변수)
+        document.write(typeof (fruits) + "<br>");
+        document.write("숫자 인덱스인 경우 <br>");
+        fruits[0] = "사과" // 배열 참조 변수[인덱스]
+        fruits[1] = "바나나"
+        fruits[2] = "오렌지"
+        //var fruilts = ["Apple", "Banana", "Orange"];
+        //숫자 인덱스일 경우
+        for (i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + "<br>");
+        }
+
+        // 숫자 인덱스가 아닌 경우
+        var fruits2 = new Array();  // 배열 선언 (fruits: 배열참조 변수)
+        document.write("문자열 인덱스인 경우 <br>");
+        fruits2['a'] = "사과" // 배열 참조 변수[인덱스]
+        fruits2['b'] = "바나나"
+        fruits2['c'] = "오렌지"
+
+        // 숫자 인덱스가 아닌 경우
+        for (var f in fruits2) {
+            //f에는 인덱스만 넘어옮
+            document.write(fruits2[f] + "<br>");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

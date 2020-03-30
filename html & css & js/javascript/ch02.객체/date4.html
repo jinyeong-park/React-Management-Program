@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+</head>
+
+<body>
+    <div id="clock"></div>
+    <script>
+        function setClock() {
+            var now = new Date();   //현재 시각 객체
+            var s = "<span style='color:blue;'>" + now.getFullYear() + "-" + (now.getMonth() + 1) +
+                "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes()
+                + ":" + now.getSeconds() + "</span>";
+
+            //태그.innerHTML : 태그의 내부 영역
+            // document.getElementById("clock").innerText = s;
+            document.getElementById("clock").innerHTML = s;
+        }
+        //setInterval("함수이름()", 호출간격) : 호출 후 계속 반복호출함
+        //cf. setTimeout("setClock()", 1000); // 1번만 호출되고 멈춰버림
+        setInterval("setClock()", 1000);
+    </script>
+</body>
+
+</html>

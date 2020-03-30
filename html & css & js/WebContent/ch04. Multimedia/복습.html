@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 코멘트 처리 -->
+    <p>문단 나누기</p>
+    <img src="" alt="kids">
+    <br>
+    <hr>
+    </hr>
+    나는 공부를 합니다.&nbsp;&nbsp;&nbsp;그리고 수퍼에 갑니다.
+
+
+    <!-- unordered list + <Sequence>표현하기-->
+    <ol> &lt;Sequence&gt;
+        <li>first</li>
+        <li>second</li>
+        <li>three</li>
+    </ol>
+
+    <!-- 테이블 만들기 tr th td// 위에서 부터 시작 -->
+    <table border="1">
+        <caption>Three Students</caption>
+        <tr align="center">
+            <td rowspan="5">Build</td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">Button</td>
+            <td rowspan="2">Map</td>
+
+        </tr>
+        <tr align="center">
+            <td>A</td>
+            <td> B</td>
+        </tr>
+        <tr align="center">
+            <td>1000</td>
+            <td>500</td>
+            <td rowspan="2">Web</td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">2500</td>
+        </tr>
+    </table>
+    <br>
+    <!-- <p>&nbsp;</p> -->
+    <!-- 테이블 만들기2-->
+    <table border="1">
+        <!-- first row-->
+        <caption>테이블 만들기2</caption>
+        <tr align="center">
+            <td colspan="4">Student Room</td>
+        </tr>
+
+        <tr align="center">
+            <td rowspan="3">Cell</td>
+            <td rowspan="6">View</td>
+            <td colspan="2">Team</td>
+        </tr>
+        <tr>
+            <td colspan="2">Number</td>
+        </tr>
+        <tr>
+            <td colspan="2">Data</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Styles</td>
+            <td rowspan="3">PDF</td>
+            <td rowspan="3">Home</td>
+        </tr>
+    </table>
+
+
+    <!-- tr (Table Row): 테이블 행 -->
+    <!-- th (Table Header):  가운데 정렬, 진한 글씨-->
+    <!-- td (Table Division):  테이블 셀-->
+    <br>
+
+    <!-- 글씨 관련-->
+    <b>글씨 굵게</b> <br>
+    <strong>글씨 굵게</strong> <br>
+
+    <br>
+    <i>글씨 기울이기</i> <br>
+    <em>글씨 기울이기</em>
+
+    <br>
+    <p></p>
+    <!-- 구글로 하이퍼링크 작성하기-->
+    <a href="https:www.google.com">Google</a>
+    <p></p>
+    <!-- 구글로 하이퍼링크 작성하기/ 뉴페이지-->
+    <a href="https:www.google.com" target="_blank">Google 뉴페이지로 오픈하기</a>
+
+    <p></p>
+    <!-- 패스워드 입력받는 입력 태그 작성-->
+    Password: <input type="password" name="pass" required><br>
+    <!-- Password: <input type="text" name="pass" value="비밀번호"> -->
+    <input type="submit">
+    <br>
+
+    <!-- // <input type="text" name="price" required><br> -->
+    <!-- 
+    Password1: <input type="password" name="pass" required><br />
+    Password2: <input type="text" name="pass" value="your birthday">
+    <p>
+
+        1. <input type="submit" value="confirm" name="계산"> <br />
+        2. <input type="button" value="Ok" onclick="check()"><br />
+        3. <button type="button" onclick="check()">계산</button><br />
+        4. <input type="image" src="../images/first.jpg" alt="제출버튼"><br /> -->
+
+    <!-- select-->
+    <!-- Flower name: <select name="flowers" multiple> -->
+    Flower name: <select name="flowers">
+        <option value="rose">Rose</option>
+        <option value="rose">Sunflower</option>
+        <option value="tulip">Tulip</option>
+        <option value="rosemary" selected>Rosemary</option>
+    </select>
+
+
+</body>
+
+</html>

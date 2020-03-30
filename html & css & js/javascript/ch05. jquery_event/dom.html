@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            $("#text").click(function () {
+                //자바스크립으로 구현한 경우
+                document.getElementById("target").innerText = "<marquee>.text 변경된 내용입니다.</marquee>";
+                // $("#target").text("<marquee>.text 변경된 내용입니다.</marquee>");
+            });
+            //자바스크립으로 구현한 경우
+            // document.getElementById("target").innerHTML = "<marquee>.html 변경된 내용입니다.</marquee>";
+            $("#html").click(function () {
+                $("#target").html("<marquee>.html 변경된 내용입니다.</marquee>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>jQuery를 이용한 DOM 변경</h2>
+    <p id="target">
+        이것은 <strong>하나의</strong> 단락입니다. <br>
+        <button id="text">버튼1</button>
+        <button id="html">버튼2</button>
+    </p>
+
+
+</body>
+
+</html>

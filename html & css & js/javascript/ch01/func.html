@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id & name 이용한 함수 만들기</title>
+    <script>
+        function greeting(name, position) {
+            alert(name + " " + position + "님 안녕하세요.");
+            if (name == "") {
+                alert("이름을 입력하세요.");
+                document.getElementById("name").focus();
+                return;
+            }
+            if (position == "") {
+                alert("직급을 입력하세요.");
+                document.getElementById("position").focus();
+                return;
+            }
+        }
+        function greeting2() {
+            //document.getElementById("태그의id")
+            var name = document.getElementById("name").value;
+            var position = document.getElementById("position").value;
+            if (name == "") {
+                alert("이름을 입력하세요.");
+                // id= name 인 곳에 커서를 깜빡이게 하세요
+                document.getElementById("name").focus();
+                return;
+            }
+            if (position == "") {
+                alert("직급을 입력하세요.");
+                document.getElementById("position").focus();
+                return;
+            }
+
+            var str = name + " " + position + "님 안녕하세요?";
+            alert(str);
+            // document.getElementById("form1").submit();
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form1" method="post" action="func_result.jsp">
+        이름 : <input id="name" name="name"><br>
+        직급 : <input id="position" name="positon"><br>
+        <button type="button" onclick="greeting2()">확인</button>
+        <!-- <button type="button" onclikc="greeting2">확인</button> -->
+
+        id: 검색이 빠르게 됨
+        name: 서버에서 필요
+    </form>
+
+</body>
+
+</html>

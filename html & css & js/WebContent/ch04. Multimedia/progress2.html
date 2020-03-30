@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress bar</title>
+    <script>
+        function start() {
+            var bar = document.getElementById("bar");
+            var progress = document.getElementById("progress");
+            loaded = 0;
+            var load = function () {
+                loaded += 5;
+                bar.value = loaded;
+                bar.max = 200;
+                progress.innerHTML = "진행률:" + loaded;
+                if (loaded == bar.max) {
+                    // 타이머 해제
+                    clearInterval(func);
+                }
+            };
+            var func = setInterval(load, 50);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="시작" onclick="start()">
+    <progress id="bar" value="0" max="100"></progress>
+    <span id="progress"></span>
+</body>
+
+</html>

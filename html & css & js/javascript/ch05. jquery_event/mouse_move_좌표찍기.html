@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 좌표 찍기</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        //jquery code
+        //$(현재 페이지 선택)
+        $(document).mousemove(function (e) {
+            console.log(e);
+            //$("#log").text : 태그 무시
+            $("#log").html("<h2 style='color:red'>x:" + e.pageX
+                + ", y:" + e.pageY + "</h2>");
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="log"></div>
+
+</body>
+
+</html>

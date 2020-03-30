@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="test">This is a heading</h1>
+    <script>
+        //자바스크립트가 디자인 속성을 바꾸는 함수 만들기
+        function func() {
+            var e = document.getElementById("test");
+            e.style.color = "red";
+            e.style.backgroundColor = "yellow"
+        }    </script>
+    <button type="button" onclick="func()">클릭하세요</button>
+
+</body>
+
+</html>

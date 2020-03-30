@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /* 이웃한 경계를 합침/ 이중 실선이 없어짐 */
+            border-collapse: collapse;
+            /* border: blue 1px */
+        }
+
+        td,
+        th {
+            /* 글자색 */
+            color: white;
+            background-color: green;
+            height: 50px;
+            width: 150px;
+            text-align: center;
+            /* 수직 정렬 방식 top middle bottom */
+            vertical-align: middle;
+            /* border: blue 1px */
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid blue;
+        }
+
+        caption {
+            /* 표제목의 위치 top bottom; */
+            caption-side: top;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>고객 리스트</h1> -->
+    <!-- <table border="1px"> -->
+    <table>
+        <caption>고객 리스트</caption>
+        <tr>
+            <th>이름</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>chul@gmail.com</td>
+        </tr>
+        <tr>
+            <td>김영희</td>
+            <td>kim@gmail.com</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

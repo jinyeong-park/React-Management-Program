@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            //마우스가 이미지 영역 벗어날때
+            $("img").mouseout(function () {
+                $("img").attr("src", "../images/first.jpg");
+            })
+            //마우스가 이미지 위에 올라갈때
+            $("img").mouseover(function () {
+                $("img").attr("src", "../images/bg.jpeg");
+            })
+            //이미지를 클릭할때
+            $("img").click(function () {
+                $("img").attr("src", "../images/leaf.jpeg");
+            })
+        })
+        //한꺼번에 묶어서 표현 : 선택자.bind({ 이벤트종류: 함수})
+        // $("img").bind({
+        //     //마우스가 이미지 영역 벗어날때
+        //     mouseout: function () {
+        //         $("img").attr("src", "../images/first.jpg");
+        //     },
+        //     //마우스가 이미지 위에 올라갈때
+        //     mouseover: function () {
+        //         $("img").attr("src", "../images/bg.jpeg");
+        //     },
+        //     //이미지를 클릭할때
+        //     click: function () {
+        //         $("img").attr("src", "../images/leaf.jpeg");
+        //     }
+        // })
+    </script>
+</head>
+
+<body>
+    <img src="../images/bg.jpeg">
+</body>
+
+</html>

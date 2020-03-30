@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ol {
+        /* ol에 보통 번호 있는데 번호 뺄 것임 : style 에 list-style: none --> */
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+        padding: 10px 0;
+        /*top 10, right 0, bottom 10, left 10 */
+    }
+
+    ol li {
+        /* 상하 메뉴를 좌우로 펼치기 (한줄로 표시) */
+        display: inline;
+        /* text 대문자로 */
+        text-transform: uppercase;
+        padding: 0 10px;
+        letter-spacing: 10px;
+    }
+
+    ol li a {
+        text-decoration: none;
+        color: black
+    }
+
+    ol li a:hover {
+        /* 마우스 올렸을 때 언더라인 */
+        text-decoration: underline;
+    }
+
+    div {
+        display: inline;
+        float: right;
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+    Orderlist : 번호가 있는 리스트
+    <!-- ol태그 : 보통 번호 있는데 번호 뺄 것임 : style 에 list-style: none -->
+    <ol>
+        <!--  # : 하이퍼링크 주소 아직 없을 때 null 주소 -->
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ol>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+</body>
+
+
+<!-- block과 inline
+
+*block: 한 줄에 한 개만 배치
+h, p, ul, li, table, div, form 등의 태그에 적용
+
+*inline: 한 줄에 차례대로 배치
+a, img, input, span 등의 태그에 적용됨
+태그 { display: inline;} -->
+
+</html>

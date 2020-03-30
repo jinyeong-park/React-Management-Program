@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script>
+        $(function() {
+            $('#button1').click(function(){
+                var name= $("#name").val();   //값 읽기
+                alert(name);
+                name = prompt("이름을 입력하세요", "아무개");
+                $("#name").val(name);   // 깂 쓰기
+
+                //속성: attr
+                // 태그.attr("속성이름") :속성읽기 함수
+                //태그.attr(:속성이름", "변경할 값"): 속성 변경 함수
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    이름 :
+    <input id="name" value="">
+    <br>
+    <button id="img1" src="../images/google.png"></button></button>
+    <br>
+    <button id="button1">확인</button>
+
+</body>
+
+</html>

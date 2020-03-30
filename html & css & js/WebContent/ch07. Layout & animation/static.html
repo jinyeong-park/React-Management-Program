@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static 정적배치</title>
+    <style>
+        #one {
+            background-color: cyan;
+            width: 200px;
+            height: 50px;
+        }
+
+        #two {
+            /* position: static;  정상적인 흐름으로 배치/기본옵션으로 안 써도 됨 */
+            /* position: relative;  상대적인 배치*/
+            /* position: absolute; 절대적인 배치/ 상품세일시 사용 */
+            /*스크롤에 상관없이 절대적인 배치 */
+            position: fixed;
+            right: 30px;
+            top: 10px;
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+        }
+
+        #three {
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="one">블록1</p>
+    <div id="two">블록2</div>
+    <p id="three">블록3</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p id="four">블록4</p>
+</body>
+
+</html>

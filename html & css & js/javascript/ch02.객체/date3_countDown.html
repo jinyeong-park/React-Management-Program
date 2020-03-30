@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 카운트 다운</title>
+</head>
+
+<body>
+    <div id="remaining"></div>
+    <script>
+        function datesUntilNewYear() {
+            var now = new Date();
+            var newYear = new Date((now.getFullYear() + 1), 0, 1);  //0에 +1을 해서 1월
+            var diff = newYear - now;
+            diff = diff / 1000;   //1초가 됨
+            var seconds = Math.floor(diff % 60);
+            diff = diff / 60;
+            var minutes = Math.floor(diff % 60);
+            diff = diff / 60;
+            var hours = Math.floor(diff % 24);
+            diff = diff / 24;
+            var days = Math.floor(diff);
+            var outStr = "내년 신정까지 " + days + "일, "
+                + hours + "시간, " + minutes + "분, " + seconds + "초 남았습니다.";
+            //태그의 내부 영역에 html 코드를 출력
+            document.getElementById("remaining").innerHTML = outStr;
+            //타이머 설정 setTimeout("실행할 함수", 실행간격)
+            setTimeout("datesUntilNewYear()", 1000);
+        }
+        datesUntilNewYear()
+    </script>
+
+</body>
+
+</html>

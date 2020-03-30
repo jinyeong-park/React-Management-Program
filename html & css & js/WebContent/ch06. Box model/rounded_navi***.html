@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* ul {
+            border: 1px gray;
+            border-radius: 3px;
+        }
+
+        ul li {
+            display: inline;
+        } */
+        ul.navi li {
+            /* 불릿 없앰 */
+            list-style-type: none;
+            /* 영역 만듦 block */
+            display: block;
+            /* 너비 */
+            width: 8em;
+            /* 높이 */
+            height: 3em;
+            /* 왼쪽으로 플로팅 ********/
+            float: left;
+            /* 글씨 가운데 정렬 */
+            text-align: center;
+            /* 글꼴 세팅 */
+            /*공백 있는 경우 "" 치기"
+            font-family: "Lucida Grande", sans-serif;
+            /* 테두리 */
+            border: 1px #818181 solid;
+            /* 박스 그림자 : x축 y축 blur%*/
+            box-shadow: 1px 1px 1px #bbb;
+        }
+
+        /* 메뉴 링크 스타일 */
+        ul.navi li a {
+            /* 영역 만듦  a태그는 하나만 배치 (inline요소)되는데 
+            block 되면 하나 배치되면 다른게 안 들어옮*/
+            display: block;
+            /* 안 여백 */
+            padding: .8em .5em .8em .5em;
+            /* 글씨 밑줄 없앰 */
+            text-decoration: none;
+            /* 텍스트 그림자 */
+            text-shadow: 1px 1px 0px #cccccc;
+        }
+
+        /* 메뉴 링크 위로 마우스 오버했을 때의 스타일 */
+        ul.navi li:hover {
+            background-color: #333333;
+
+        }
+
+        /* 메뉴 링크 위로 마우스 오버한 후 링크 스타일 */
+        ul.navi li:hover>a {
+            /* 자식 (직계자손) 태그 */
+            color: #fff;
+            text-shadow: 0px 1px 0px #fff;
+        }
+
+        /* 테두리 라운드 처리 */
+        /* 첫번째 항목의 스타일 */
+        ul.navi li:first-child {
+            /* 왼쪽 상단 코너를 부드럽게 */
+            border-top-left-radius: 1em;
+            border-bottom-left-radius: 1em;
+        }
+
+        /* 마지막 항목의 스타일 */
+        ul.navi li:last-child {
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <ul class="navi">
+        <li class="home"><a href="#">Home</a></li>
+        <li class="html"><a href="#">HTML5</a></li>
+        <li class="css"><a href="#">CSS3</a></li>
+        <li class="jquery"><a href="#">JQuery</a></li>
+    </ul>
+</body>
+
+</html>

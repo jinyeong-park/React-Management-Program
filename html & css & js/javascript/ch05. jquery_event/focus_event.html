@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        // "jquery script 안에 작성- 자동 실행"
+        $(function () {
+            //입력포커스를 얻을 때
+            //선택자.css("스타일속성","값")
+            $("input").focus(function () {
+                $(this).css("background-color", "yellow");
+                $(this).css("border", "3px dotted red");
+            });
+            //blur: 입력포커스를 잃을 때
+            $("input").blur(function () {
+                $(this).css("background-color", "white");
+                $(this).css("border", "1px solid black");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    아이디 <input type="text" name="name">
+    <!-- 아이디 <input type="text" name="name" onblur=""> -->
+
+
+
+</body>
+
+</html>

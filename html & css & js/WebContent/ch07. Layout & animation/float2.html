@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  float: left 요소가 왼쪽에 자리를 차지함
+    float: right 요소가 오른쪽에 자리를 차지함 -->
+    <style>
+        img {
+            float: left;
+        }
+
+        div {
+            float: right;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: yellow;
+        }
+
+        #div2 {
+            clear: both;
+            float: left;
+        }
+
+        /* clear: both 이전에 적용된 float 속성 제거 */
+    </style>
+</head>
+
+
+<body>
+    <!-- float : 배치 방향
+    태그 { float:left;} 이미지가 왼쪽에 배치하고 오른쪽에 글 배치
+    태그 { float:right;} 이미지가 오른쪽에 배치 -->
+
+    <img src="../images/first.jpg">
+
+    <p>
+        텍스트 영역........................
+        텍스트 영역........................
+        텍스트 영역........................
+        텍스트 영역........................
+        텍스트 영역........................
+        텍스트 영역........................
+        텍스트 영역........................
+        텍스트 영역........................
+    </p>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div id="div2">div4</div>
+
+</body>

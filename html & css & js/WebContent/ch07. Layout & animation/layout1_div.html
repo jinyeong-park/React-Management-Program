@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout1</title>
+    <!-- 스타일을 통한 화면의 논리적 구성 -->
+    <style>
+        /* body {
+            font: 14px 맑은 고딕;
+        } */
+
+
+        #header {
+            background-color: yellow;
+            width: 100%;
+            height: 50px;
+        }
+
+        #nav {
+            background-color: red;
+            width: 30%;
+            height: 100px;
+            float: left;
+        }
+
+        #content {
+            background-color: blue;
+            width: 70%;
+            height: 100px;
+            float: right;
+        }
+
+        #footer {
+            background-color: aqua;
+            width: 100%;
+            height: 50px;
+            /* float 속성을 모두 해제/ 안하면 아쿠아 색상 안나옮 */
+            clear: both
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 화면배치방법1. div태그를 이용한 화면 배치 방법 -->
+    <div id="wrapper">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="content">content</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+
+</html>

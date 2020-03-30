@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //Date 내장객체 (날짜 자료형)
+    var d1 = new Date();
+    document.write(d1.getYear() + 1900 + "<br>");
+    document.write(d1.getFullYear() + "<br>");
+    document.write(d1.getMonth() + 1 + "<br>"); //month +1을 더해줘야
+    document.write(d1.getDate() + "<br>");
+    // document.write(d1.getTime() + "<br>");
+    document.write(d1.getHours() + "<br>");
+    document.write(d1.getMinutes() + "<br>");
+    document.write(d1.getSeconds() + "<br>");
+    document.write(d1.getMilliseconds() + "<br>");
+    document.write("==============================<br>");
+    document.write(d1.toDateString() + "<br>");       //Tue Mar 24 2020
+    document.write(d1.toISOString() + "<br>");        //2020-03-24T20:56:47.323Z
+    document.write(d1.toJSON() + "<br>");             //2020-03-24T20:56:47.323Z
+    document.write(d1.toLocaleDateString() + "<br>"); //3/24/2020 
+    document.write(d1.toLocaleTimeString() + "<br>"); //1:59:16 PM
+    document.write(d1.toLocaleString() + "<br>");     //3/24/2020, 2:02:39 PM  (한국 스타일)
+    document.write(d1.toString() + "<br>");           //Tue Mar 24 2020 13:59:16 GMT-0700 (Pacific Daylight Time)
+    document.write(d1.toTimeString() + "<br>");       //14:00:14 GMT-0700 (Pacific Daylight Time)
+    document.write(d1.toUTCString() + "<br>");        //Tue, 24 Mar 2020 21:00:14 GMT (세계표준시)
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

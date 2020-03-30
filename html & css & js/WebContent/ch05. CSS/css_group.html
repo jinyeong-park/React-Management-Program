@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여러 태그를 한꺼번에</title>
+    <!-- 선택자 그룹: 여러 태그를 한꺼번에 선택 -->
+    <!-- <style 안 속성: 
+font-family(글꼴)/ font-size/ 
+font-style/ font-weight/ 
+border(테두리)/ color(글자색); -->
+
+    <!-- /* h1 p : h1 속에 들어 있는 p */
+     /* h1, p : h1과 p 스타일 */ -->
+
+    <style>
+        h1,
+        p {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            border: 2px solid red;
+            color: black;
+        }
+
+        /* h1 p {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            border: 2px solid red;
+            color: black;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>헤딩 태그</h1>
+    <h1>헤딩 <p>태그</p>
+    </h1>
+    <p>p태그</p>
+
+</body>
+
+</html>

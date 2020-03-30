@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gugu() {
+            //document.getElementById("태그의id")
+            var dan = document.getElementById("dan").value;
+            var str = "";
+            for (i = 1; i <= 9; i++) {
+                str += dan + "x" + i + "=" + dan * i + "<br>";
+            }
+            //결과 집어 넣을 때: 태그.innerHTML : <태그>innerHTML영역</태그>
+            //innerText : html 태그를 무시
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="dan" value="3" size="5">
+    <input type="button" value="확인" onclick="gugu()">
+    <!-- <button type="submit" onclick="gogo()">확인</button> -->
+    <div id="result">결과를 표시할 영역</div>
+
+</body>
+
+</html>

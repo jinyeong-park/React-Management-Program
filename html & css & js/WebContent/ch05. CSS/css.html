@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 작서하는 방법</title>
+
+    <!-- <2. 내부 스타일 시트 작성 - head 안에, p style로 직접 지젇한 것이 우선시 되고
+        지정하지 않은 부분은 <style>내부에 정한 것이 적용>, 
+        p 태그에 좀 다르게 적용하고 싶다면 p에 class 지정 -->
+    <style>
+        /* 스타일시트 (css) 주석 */
+        p {
+            color: blue;
+            background-color: yellow;
+            font-size: 40px;
+        }
+
+        /* p 태그에 좀 다르게 적용하고 싶다면 p에 class 지정해서 적용 */
+        p.style1 {
+            font-size: 20px;
+            color: red;
+        }
+
+        /*  p 태그 중 class가 style1인 것만 적용 */
+        .style2 {
+            font-size: 40px;
+            color: aqua;
+        }
+
+        /*  class가 style1인 것 다 적용 */
+    </style>
+</head>
+
+<body>
+    <!-- style 태그 : 글자색상: color /  배경색상: background-color -->
+    <!-- <1. 인라인 스타일 시트> -->
+    <p style="color: aqua; background-color:fuchsia">This is a paragraph.</p>
+    <p class="style1">두번째 단락</p>
+    <p class="style2"></p>세번째 단락</p>
+    <span class="style1">첫번째 span</span>
+</body>
+
+</html>

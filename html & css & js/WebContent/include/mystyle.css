@@ -1,0 +1,8 @@
+/* 따로 css 파일 만듦 --- extstyle.html 연결 */
+@charset "UTF-8";
+h1 {
+  color: red;
+}
+p {
+  color: #0026ff;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 검사</title>
+    <script>
+        str = "자바 프로그램, Like father, like son.";
+        // 문자열.match(/검색키워드/옵션)
+        // i : insensitive 대소문자 구분없이 검사
+        // g : global(전역검사)
+        result1 = str.match(/Like/ig);  // Like,like
+        result2 = str.match(/Like/);    // Like만 찾음
+        document.write(result1 + "<br>");
+        document.write(result2 + "<br>");
+        //문자열.replce(A, B) : A를 B로 변경
+        result = str.replace("자바", 'java');
+        document.write(result + "<br>");
+        //배열 = 문자열.split("구분자"), 구분자를 기준으로 배열[] 생성
+        str = "one two three four five";
+        array = str.split(" ");  //공백으로 쪼개서 배열로 만들기
+        document.write(typeof (array) + "<br>")     //object
+        for (var s in array)
+            document.write(s + ":" + array[s] + "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

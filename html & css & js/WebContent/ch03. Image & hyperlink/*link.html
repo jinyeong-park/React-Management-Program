@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--a:anker tag <a href="이동할 주소">하이퍼링크 텍스트</a>-->
+    <a href="http://nate.com" title="네이트로 이동합니다.">네이트 홈페이지</a><br>
+    <a href="http://daum.net" title="다음으로 이동합니다.">다음 홈페이지</a><br>
+
+    <!-- 새창(탭)으로 열기-->
+    <a href="http://google.com" target="_blank">구글 홈페이지</a><br>
+    <!-- 이미지에 하이퍼링크 걸기-->
+    <a href="http://google.com"><img src="google.png" width="200" height="100"></a>
+
+    <!-- /*스타일 시트 추가/ 태그 세부 속성 -->
+    <style>
+        a:link {
+            /* 기본 하이퍼링크 */
+            text-decoration: none;
+            color: red;
+        }
+
+        a:hover {
+            /* 기본 하이퍼링크 */
+            text-decoration: underline;
+            color: blue;
+        }
+
+        a:visited {
+            /* 기본 하이퍼링크 */
+            text-decoration: line-through;
+            color: purple;
+        }
+
+        a:active {
+            /* 기본 하이퍼링크 */
+            text-decoration: underline;
+            color: green;
+        }
+    </style>
+
+</body>
+
+</html>

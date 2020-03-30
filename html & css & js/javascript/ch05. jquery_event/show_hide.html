@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script>
+        //jquery 표시
+        $(function () {
+            $("#btnShow").click(function () {
+                //slow, fast
+                $("#img1").show("slow");   //fast, slow
+            });
+            $("#btnHide").click(function () {
+                $("#img1").hide("fast");
+            });
+            $("#btnToggle").click(function () {
+                $("#img1").toggle("fast");
+            });
+            //투명도 0.0 완전 투명, 1.0 완전 불투명, 0.5:반투명
+            $("#btnAnimate").click(function () {
+                $("#img1").animate({
+                    left: '500px',      //left: x좌표
+                    top: '200px',       //top: y좌표
+                    opacity: '0.5'
+                }, 5000);               //5초동안 천천히
+            });
+            $("#btnFadein").click(function () {
+                //$("#img1").faceIn("slow");
+                $("#img1").fadeIn(5000, function () {   //5초동안 천천히 나나나라
+                    $("#img2").fadeIn("slow");
+                });
+            });
+            $("#btnFadeout").click(function () {
+                //$("#img1").faceIn("slow");
+                $("#img1").fadeOut("slow");
+            });
+            $("#btnSlidedown").click(function () {
+                $("#img1").slideDown("slow");
+            });
+            $("#btnSlidedUp").click(function () {
+                $("#img1").slideUp("slow");
+            });
+            $("#btnChain").click(function () {
+                $("#img1").show().faceOut("slow").slideDown("slow");
+            });
+        });
+
+    </script>
+    <style>
+        #img1 {
+            display: block;
+            position: relative;
+            /* 상대 좌표 */
+
+            /* display 속성: block(한줄 한개만 배치) / inline(한줄에 여러개 배치)/ none:자리차지 하지 않음/표시 안함) */
+        }
+
+        #img2 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <input type="button" name="표시" value="표시"> -->
+    <h1>애니메이션 효과</h1>
+    <button id="btnShow">표시</button>
+    <button id="btnHide">숨김</button>
+    <button id="btnToggle">toggle</button>
+    <button id="btnAnimate">애니메이션</button>
+    <button id="btnFadein">페이드인</button>
+    <button id="btnFadeout">페이드아웃</button>
+    <button id="btnSlidedown">slide down</button>
+    <button id="btnSlideup">slide up</button>
+    <button id="btnChain">여러 효과</button>
+    <hr>
+    <img id="img1" src="../images/leaf.jpeg">
+    <img id="img2" src="../images/google.png">
+
+</body>
+
+</html>

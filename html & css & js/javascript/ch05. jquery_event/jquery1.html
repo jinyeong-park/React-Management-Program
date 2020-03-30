@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="../include/jquery-3.2.1.js"></script> -->
+    <!-- jQuery 다운 받지 않고 인터넷에서 다운 받는 방법 -->
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script>
+        // jquery 문법 $("h2").click(function(){   });
+        // h2 클릭할때마다 사라짐
+        $(function () {
+            $("h2").click(function () {
+                $(this).hide();   //this: click한 태그
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <h2>첫번째 h2</h2>
+    <h2>두번째 h2</h2>
+    <h2>세번째 h2</h2>
+
+</body>
+
+</html>
