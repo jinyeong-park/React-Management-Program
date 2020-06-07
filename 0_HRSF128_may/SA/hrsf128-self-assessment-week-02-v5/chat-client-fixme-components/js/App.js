@@ -22,8 +22,9 @@ var App = {
     var text = $('#message').val();
     var username = $('#username').val();
 
+    //changeed
     Messages.create(text, username, MessagesView.render);
-    //Messages.create(text, username);
+    // Messages.create(text, username);
 
     $('.userInput').val('');
   },
