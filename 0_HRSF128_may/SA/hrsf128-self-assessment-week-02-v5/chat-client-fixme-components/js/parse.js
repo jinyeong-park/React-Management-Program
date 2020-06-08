@@ -25,7 +25,7 @@ var Parse = {
       contentType: 'application/json',
       success: (data) => {
         console.log('Success!', data);
-        //*
+        //*add callback
         callback(data);
       },
       error: (status) => {
